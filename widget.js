@@ -1,18 +1,23 @@
-(function() {
+WAF.define('BindMe', function() {
     var widget = WAF.require('waf-core/widget');
     
     //creating the widget
     var BindMe = widget.create('BindMe');
 
-	// customizing the actions when the value is binded
-    BindMe.prototype._setValue = function (value) {
- 			this.node.innerHTML = value + " + Hello World"; 
-    };
- 
- 	// adding a property automatically makes the property bindable
-    BindMe.addProperty('value', {
-    	default_value: 'Default',
-    	setter: BindMe.prototype._setValue
+
+    BindMe.addProperty('MyName', {
+        onChange: function(v) {
+          				this.node.innerHTML = "Hello " + v + ", how are you?"; 
+        		  }
+    });
+
+
+
+	return BindMe;
+});
+
+// For more information, refer to http://doc.wakanda.org/Wakanda0.DevBranch/help/Title/en/page3871.html
+: BindMe.prototype._setValue
     });
 
 
