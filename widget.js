@@ -1,15 +1,16 @@
 WAF.define('BindMe', function() {
-    var widget = WAF.require('waf-core/widget');
+	
+	var widget = WAF.require('waf-core/widget');
     
     //creating the widget
-    var BindMe = widget.create('BindMe');
+	var BindMe = widget.create('BindMe');
 
 
-    BindMe.addProperty('MyName', {
-        onChange: function(v) {
-          				this.node.innerHTML = "Hello " + v + ", how are you?"; 
-        		  }
-    });
+	BindMe.addProperty('MyName', {
+		onChange: function(v) {
+          		this.node.innerHTML = "Hello " + v + ", how are you?"; 
+		}
+	});
 
 
 
