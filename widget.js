@@ -6,7 +6,7 @@ WAF.define('BindMe', function() {
 	var BindMe = widget.create('BindMe');
 
 
-	BindMe.addProperty('MyName', {
+	BindMe.addProperty('myname', {
 		onChange: function(v) {
           		this.node.innerHTML = "Hello " + v + ", how are you?"; 
 		}
